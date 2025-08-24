@@ -1,0 +1,89 @@
+
+/*GRID LAYOUT ON PAGE*/
+.grid{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns:0.5fr 3fr 0.5fr; 
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+
+}
+
+/*TARGET ELEMENTS GRID ABD BASIC STYLING*/
+
+header{
+    text-align: center;
+    grid-area: header;
+    background-color: tan;
+}
+
+nav{
+    grid-area: nav;
+    background-color: linen;
+    
+}
+
+body{
+    grid-area: body;
+    background-color:mistyrose;
+    font-size: 30px;
+}
+
+.flex{
+    margin: 0;
+    background-color:indianred;
+    
+}
+
+aside{
+    grid-area: aside;
+    background-color: lavenderblush;
+        
+}
+
+footer{
+    grid-area: footer;
+    background-color: tan;
+    text-align: center;
+}
+
+/*FLEXBOX TARGETS ON INNER DIV */
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: auto;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.flex-1{
+    flex: 1 1 33.3%;
+    padding: 10px;
+    text-align: center;
+    background-color: plum;
+    border: 1px solid blueviolet;
+}
+
+/*RESPOSNIVE DESIGN*/
+@media(max-width: 600px){
+.flex {
+   display: flex;
+   flex-direction: column;
+   
+}
+
+h1{
+    font-size: 1rem;
+}
+
+body{
+    font-size: 1rem;
+}
+}
